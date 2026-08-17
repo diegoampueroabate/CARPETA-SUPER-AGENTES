@@ -118,4 +118,4 @@ De cruzarlos salió `02-Base-Conocimiento/ROAS-no-es-rentabilidad.md`: un ROAS d
 - Decohogar y Fernando Saavedra mantienen accesos activos sin ser clientes.
 - Faltan los documentos 06 y 07 de la serie DCE; no existen en el disco.
 - Ferreira sigue sin 360 del Negocio ni Manual de Marketing y Ventas. **No los escribí**: requieren margen, equipo, locales y proceso de venta que no tengo. Escribirlos con lo disponible sería fabricar un documento para el cliente más grande.
-- El correo de las 9:04 está agendado como tarea de sesión. **Muere si se cierra la terminal.** Respaldo: borrador en Gmail.
+- ✅ **Correo enviado el 2026-08-17 a las 09:04** (mensaje `1a00fd2d9c8beab4`). Se envió el borrador que se mantuvo actualizado toda la noche, no el guion original del agendado: a medianoche ese guion decía `IN_GRACE_PERIOD` y hablaba de dos decisiones, y al amanecer eran nueve y la cuenta ya estaba `UNSETTLED`.
