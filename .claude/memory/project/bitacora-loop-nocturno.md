@@ -1,84 +1,97 @@
 ---
 name: bitacora-loop-nocturno
-description: Qué se construyó en el loop de la noche del 16 al 17 de agosto de 2026
+description: Qué se construyó y qué se encontró en el loop de la noche del 16 al 17 de agosto de 2026
 metadata:
   type: project
 ---
 
-# Bitácora — noche del 16-ago-2026
+# Bitácora — noche del 16 al 17 de agosto de 2026
 
-## Construido
+Las cinco fases del plan quedaron cerradas. Lo más valioso de la noche no fue lo construido: fue lo que apareció al mirar datos que nadie podía leer.
 
-**Fase 1 — fuente de verdad: cerrada.** Registro Maestro reescrito contra la API de Meta: 20 cuentas cruzadas, cartera definida en 4 clientes que pagan + 2 sin cobro. Las 9 fichas de cliente tienen frontmatter YAML con `nombre_canonico`, `modalidad`, `meta_account_ids` y `gasto_90d_clp`. `AGENTE ADS MANAGER/CLAUDE.md` corregido: se eliminaron los dos `account_id` inexistentes que hacían fallar consultas en silencio.
+---
 
-**Fase 2 — las cinco direcciones: escritas.** En `CARPETA SUPER AGENTES/.claude/skills/`:
+## Lo que espera a Diego, por orden de costo
 
-| Dirección | Cubre |
-|---|---|
-| `direccion-marketing` | Meta Ads, copy, creativos, contenido |
-| `direccion-ventas` | pipeline GHL, propuestas, cierre |
-| `direccion-operaciones` | SOPs, incorporación, reportería, integridad de la bóveda |
-| `direccion-rrhh` | reclutamiento, delegación, frontera de criterio |
-| `direccion-finanzas` | rentabilidad, SII, riesgo de cartera |
+### 1 · Regularizar el pago de Óptica Ferreira · el riesgo se materializó
 
-Cada una arranca leyendo el Registro Maestro, respeta "por defecto solo recomendar" y escribe su resultado en la bóveda en vez de devolverlo solo en pantalla. Los 240+ skills existentes se referencian desde su repo de origen — no se copian, porque duplicados divergen en un mes.
+A las 02:00 la cuenta `1946094894848` pasó de `IN_GRACE_PERIOD` a **`UNSETTLED`** y dejó de responder consultas de la API. El período de gracia terminó: hay saldo impago con Meta pese a tener medio de pago registrado. Es la cuenta que concentra el **58% de toda la inversión administrada**. Ayer era advertencia; hoy es deuda vencida.
 
-**Fase 3 — memoria persistente: sembrada.** `.claude/memory/` con índice y las categorías `user/`, `feedback/`, `project/`, `reference/`.
+### 2 · Rotar credenciales
 
-**Fase 4 — `/onboarding-cliente`: escrito.** `.claude/skills/onboarding-cliente/SKILL.md`. Exige el nombre canónico confirmado antes de crear nada, escribe el Registro Maestro antes que la carpeta, deja `meta_account_ids: []` vacío en vez de inventar un ID, y trae la secuencia para el prospecto que **no** tiene cuenta publicitaria (BM a nombre del cliente, no de AGC — si la relación termina, el histórico y el pixel se quedan con quien pagó). Se valida el lunes 17 con los prospectos que entran.
+Tokens de Meta, API key de Google/Gemini y token de GoHighLevel estuvieron públicos unas horas. Se suman dos hallazgos de la noche: **3 PDF `CREDENCIALES OPTICA FERREIRA`** sueltos en `~/Downloads`, y el **token del pixel de Sweet en texto plano** dentro de un `.docx`, que yo mismo importé por error a la bóveda antes de retirarlo. No gobiernan datos propios: gobiernan el presupuesto publicitario de los clientes.
 
-**Corpus DCE incorporado a la bóveda.** Los nueve documentos del programa Dirección Comercial Externa vivían solo como `.docx` en `~/Downloads` y dentro del proyecto de claude.ai — invisibles para cualquier agente. Convertidos a markdown en `00-AGC-Partners/05-Comercial-Adquisicion/DCE-Programa/` con índice: branding, avatar, oferta espejo, playbook de marketing, arquitectura BOS, manual de onboarding, contrato, propuesta vigente y tarifario preferencial. `direccion-ventas`, `direccion-marketing` y `onboarding-cliente` ya apuntan ahí.
+### 3 · Facturación · ¿por dónde se factura realmente?
 
-Detalle: las copias `_1` y `_2` de Downloads son descargas repetidas byte a byte, no versiones. La única versión real distinta es `03_Oferta_Espejo_DCE_v2.0`. Faltan los números 06 y 07, y el branding nuevo que Diego hizo en claude.ai **no está descargado** — hay que bajarlo.
+Verificado por conector: la cuenta de WASABIL de **AMPUERO ABATE CONSULTING GROUP LIMITADA** (RUT 78.468.795-3) tiene `can_issue: false`, `configured: false`, sin certificado, sin folios y **cero documentos en el historial completo**. El conector devuelve vacío en vez de error, así que cualquier informe construido sobre él falla en silencio.
 
-**Marca v2.0 incorporada y auditoría documental hecha.** Diego pasó el Documento Maestro de Marca v2.0 y la propuesta de agosto. El v2.0 declara precedencia sobre todo otro documento, así que se cruzó contra los que ya estaban en la bóveda: `Conflictos-Documentales.md` lista 11 choques abiertos. Los caros: los códigos del tarifario apuntan a servicios distintos en dos documentos que circulan (MKT-001 es Meta en uno y Google en otro; IA-001 tiene 25% de diferencia de precio), la propuesta dice "más IVA" contra la decisión de boleta exenta, y el contrato conserva el componente variable que la decisión 6 prohíbe. `01-Branding.md` (v1.0) quedó como aviso de baja para que nadie lea reglas muertas.
+Y en las rendiciones de Ferreira aparecen dos cosas:
 
-Consecuencia de cartera: el piso subió a $20.000.000 mensuales. **La mayoría de los clientes actuales no lo cumple** — no obliga a soltar a nadie, pero sí cambia con qué criterio se filtran los prospectos del lunes.
+- Una línea de **$180.000 mensuales rotulada literalmente "SIN BOLETA"** — $2,16 M al año en un solo cliente, con el régimen de IVA aún sin confirmar.
+- **119 videos entregados al mes contra los 8 que incluye el programa.** La planilla los asume como "servicio bonificado" a un valor referencial declarado de $12.000 por video: **entre $1,0 y $1,4 millones de trabajo regalado cada mes**, casi el fee completo.
 
-**Contrato v2.0 escrito sobre la matriz de la propuesta.** `09-Contrato-v2.md`. Alcance, fases, ritmo y precios salen tal cual de la Propuesta de agosto; encima se aplicaron las correcciones obligatorias del v2.0: se eliminó el componente variable, entra el Director asignado en vez del compromiso nominal de Diego, la Curva de Dirección pasa a ser tabla contractual, plazo 3+3 con hito al día 90, precio por fase y cláusula nueva de plazos y expectativas. El contrato v1 quedó como aviso de baja.
+Detalle en `06-Planeacion-y-Finanzas/Estado-de-la-facturacion.md`.
 
-Corrección a lo que reporté antes: **el error del IVA nunca estuvo en el contrato** — la v1 ya decía "netos, boleta exenta". Está solo en la propuesta. Sigue pendiente la confirmación del contador sobre si AGC califica como sociedad de profesionales; si no califica, todos los precios se rehacen.
+### 4 · Confirmar el régimen tributario con el contador, por escrito
 
-Reclutamiento quedó en 3 por trimestre por instrucción expresa de Diego, aunque el v2.0 pide bajarlo a 1.
+La entidad es una **Limitada**, no una sociedad de profesionales por defecto. De eso depende la exención de IVA de la decisión 5 del v2.0. **Bloquea corregir la propuesta**, que hoy dice "más IVA" — $226.100/mes de diferencia solo en Fase 1. Si no califica, todos los precios se rehacen. Contador primero, propuesta después.
 
-**Piso de $20M propagado y tarifario unificado.** `02-Avatar.md` (ficha y anti-avatar) y el ángulo de filtro de `04-Playbook-Marketing.md` ya dicen $20.000.000. `11-Tarifario-v2.md` retira los códigos ambiguos en vez de reasignarlos —`MKT-001..005` e `IA-001/002` quedan muertos para siempre y la familia MKT parte en 101—, porque reciclar un código es exactamente lo que creó el problema. Si un cliente llega con un documento viejo, se honra el precio que ese papel dice: la ambigüedad la creó AGC.
+### 5 · Escanear el QR de WhatsApp
 
-**Dos precios quedaron sin resolver a propósito.** `IA-101` (empleado digital adicional: $320.000 vs $400.000) e `IA-102` ($160.000 vs $150.000). Precio es nivel "Dirección decide" — no se inventa. El tarifario v2 no se entrega a un cliente hasta que Diego los fije.
+La sesión perdió el vínculo por un problema de sincronización. Hasta que se reenlace no se pueden leer los chats "DC". Diez segundos con el teléfono.
 
-**Descargas minado — 155 archivos de cliente rescatados.** 28 `.docx` convertidos a markdown dentro de `Clientes/*/07-Material-Historico/`, más un índice por cliente que lista también los `.pdf` y `.xlsx` que siguen en Descargas. Las 7 fichas enlazan a su índice.
+### 6 · Aprobar rotación de creativos en Ferreira
 
-De ahí salió `01-SOPs-Maestros/Catalogo-de-Entregables.md`: **AGC ya tenía un método repetible, disperso en Descargas y sin nombrar.** La matriz real dice tres cosas incómodas — los guiones son lo único que se entrega a los 8 clientes; **solo 2 de 8 tuvieron informe mensual** (y uno era Grupal Corp, que ya se fue); y **Óptica Ferreira, el 93% de la inversión, no tiene 360 ni Manual de Marketing y Ventas** — el cliente más grande es el peor documentado. Sweet Mayorista es el mejor documentado y sirve de molde.
+Nivel *Dirección aprueba*: la propuesta se arma sin tocar nada. Fatiga medible en `1049367834100232` — frecuencia **5,25** y CTR **1,59%** en 30 días, contra 6,04% de Sweet y 5,31% de MQF. Costo por clic **3,4×** el de Sweet. No es presupuesto ni audiencia: la misma gente ve las mismas piezas cinco veces.
 
-**WhatsApp perdió el vínculo** ("problema de sincronización") y pide QR nuevo. Bloqueado hasta que Diego escanee — 10 segundos con el teléfono.
+### 7 · Decisiones menores abiertas
 
-**Riesgo nuevo:** hay 3 PDF `CREDENCIALES OPTICA FERREIRA` sueltos en `~/Downloads`.
+- Reclutamiento: quedó en 3 procesos por trimestre por instrucción expresa; el v2.0 pide 1. Con 4 clientes no se nota, con 10 sí.
+- Los repos están commiteados **en local, sin push**. Subir después de la filtración es decisión de Diego.
 
-**Torre de Control publicada.** https://claude.ai/code/artifact/9acd9a55-701a-4352-a1e4-12da7343d753 — la interfaz que Diego pidió ver al despertar: cartera con la barra de concentración, conectores vivos y caídos, los 8 comandos, lo construido y las 5 decisiones que lo esperan. Usa su propio sistema de marca (carbón `#252526`, rojo AGC `#FC2D3C`, serif editorial), que es lo que el v2.0 exige. Para actualizarla hay que republicar el mismo archivo o pasar esa URL como `url`.
+---
 
-**Propuesta corregida en lo que no depende del contador.** Ya dice "tu Director asignado" en vez de comprometer a Diego nominalmente, y se le incorporó la Sección 7 que faltaba: garantía del día 30 con devolución del 100% del primer mes, los plazos honestos (30 / 45-90 / 90-180) y el traspaso completo de infraestructura — todo **antes del precio**, como manda §15.1. Era la afirmación más fuerte que tiene AGC y no estaba en el documento que el prospecto se lleva.
+## Lo que se construyó
 
-**Plantilla de informe mensual creada** (`04-Plantillas/Informe-Mensual-Cliente.md`) y `direccion-operaciones` ya apunta ahí. Cierra la brecha 2/8. Reglas duras que trae: el número va primero aunque el mes sea malo; la sección "qué no funcionó" nunca va vacía; y sin dato de venta no se emite recomendación de presupuesto.
+**Fase 1 · fuente de verdad.** Registro Maestro reescrito contra la API: 20 cuentas cruzadas, cartera en 4 que pagan + 2 sin cobro. Se eliminaron dos `account_id` inexistentes que hacían fallar consultas en silencio. Las 9 fichas con frontmatter y alias de Obsidian para que los wikilinks resuelvan.
 
-**8 de 11 conflictos documentales resueltos.** Quedan: el IVA (bloqueado por el contador), reclutamiento 3 vs 1 (decisión tomada por Diego) y dos menores sin urgencia.
+**Fase 2 · las cinco direcciones** en `.claude/skills/`: marketing, ventas, operaciones, rrhh, finanzas. Cada una arranca leyendo el Registro Maestro, respeta "por defecto solo recomendar" y escribe en la bóveda. Los 240+ skills existentes se referencian desde su repo — no se copian.
 
-**El riesgo número uno se materializó a las 02:00.** Consulté la API: `1946094894848` pasó de `IN_GRACE_PERIOD` a **`UNSETTLED`** y ya no responde consultas. Saldo impago con Meta pese a tener medio de pago. Propagado al Registro Maestro, a la ficha de Ferreira, a [[riesgo-concentracion]] y a la Torre de Control.
+**Fase 3 · memoria persistente** en `.claude/memory/`, indexada en MEMORY.md.
 
-**Primer informe de dirección real generado** con datos frescos: `06-Planeacion-y-Finanzas/informes/2026-08-17-informe-direccion.md`. Últimos 30 días — Ferreira Spa $13.635.429 (CTR 1,59% · frecuencia **5,25** · CPC $90), Sweet $1.273.585 (CTR 6,04% · CPC $27), MQF $691.514 (CTR 5,31% · CPC $49). **Fatiga creativa medible en Ferreira:** costo por clic 3,4× el de Sweet porque la misma gente ve las mismas piezas cinco veces. Es rotación de creativos, no reasignación de presupuesto — y el informe **no recomienda distribución de plata** porque no hay dato de venta de ningún cliente.
+**Fase 4 · `/onboarding-cliente`.** Nombre canónico confirmado antes de crear nada, Registro Maestro antes que la carpeta, `meta_account_ids: []` vacío en vez de inventado, y la secuencia para el prospecto sin cuenta publicitaria — BM a nombre del cliente, no de AGC.
 
-Correcciones que salieron de la API: Kristus no está bloqueado, es despliegue gradual del MCP ("Ads MCP is gradually being rolled out"). La cuenta web de Ferreira `1228089025451973` corre vacía, sin gasto en 30 días. Decohogar y Fernando Saavedra siguen con accesos activos sin ser clientes.
+**Fase 5 · levantamiento técnico.** El hallazgo fue que nada estaba versionado: la bóveda con 24 cambios sin commitear y el orquestador **sin git en absoluto**. Ambos commiteados.
 
-**Fase 5 — levantamiento técnico: el hallazgo fue que nada estaba versionado.** `AGENTE DE PROCESO` tenía 24 cambios sin commitear (toda la noche) y `CARPETA SUPER AGENTES` **no tenía git en absoluto** — el orquestador, los 7 skills y la memoria completa, sin control de versiones. Ambos commiteados **en local, sin push**: los repos son privados pero subir después de la filtración de tokens es decisión de Diego.
+**Corpus comercial en la bóveda.** Los nueve documentos del programa vivían como `.docx` en Descargas, invisibles para cualquier agente. Convertidos a `05-Comercial-Adquisicion/DCE-Programa/`, con la **Marca v2.0** declarada de máxima precedencia y la v1.0 retirada a aviso de baja.
 
-**El escaneo previo al commit encontró un token real que yo mismo había importado.** `PIXEL-Y-TOKEN-SWEET.md` traía el token del pixel de Sweet en texto plano, convertido desde un `.docx` de Descargas. Retirado antes de commitear y reemplazado por un aviso — un token en un repo de git queda en el historial para siempre. **Sumarlo a la lista de rotación.**
+**8 de 11 conflictos documentales resueltos.** Contrato v2 sin componente variable, con Director asignado y la Curva de Dirección como tabla contractual, plazo 3+3. Tarifario v2 con los códigos ambiguos **retirados, no reasignados** (`MKT-001..005` e `IA-001/002` quedan muertos; la familia MKT parte en 101). Propuesta con garantía del día 30 y plazos honestos, antes del precio. Piso de entrada a **$20.000.000** propagado al avatar y al playbook.
 
-Y mi propio `.gitignore` tapó `credenciales-expuestas.md`, que es una nota de memoria, no un secreto: en Windows git compara sin distinguir mayúsculas y `**/CREDENCIALES*` la capturaba. Acotado a `.pdf` y `.docx`.
+**155 archivos de cliente rescatados de Descargas**, 28 convertidos a markdown en `Clientes/*/07-Material-Historico/` con índice por cliente. De ahí salió `01-SOPs-Maestros/Catalogo-de-Entregables.md`: AGC ya tenía un método repetible, sin nombrar. La matriz dice que los guiones son lo único que se entrega a los 8 clientes, que **solo 2 de 8 tuvieron informe mensual**, y que **Ferreira es el peor documentado** de la cartera.
 
-## Pendiente
+**Plantilla de informe mensual** (`04-Plantillas/Informe-Mensual-Cliente.md`) y el **primer informe real** con datos de la API (`06-Planeacion-y-Finanzas/informes/2026-08-17-informe-direccion.md`).
 
-- Fase 5: levantamiento técnico.
-- El correo de las 9:00 está agendado como tarea de sesión (`cron` one-shot). **Muere si se cierra la terminal.** Respaldo: borrador en Gmail con el mismo contenido.
+**Los dos únicos cruces de gasto contra venta que existen**, extraídos de `.xlsx` ilegibles:
 
-## Requiere decisión de Diego
+- **Kristus** — gira norte: venta $11.757.999 · pauta $760.323 · ROAS **15,46×** · margen neto **12,6%**. Su conector está deshabilitado, así que ese archivo es su única fuente de datos.
+- **Ferreira** — marzo: venta $95.780.000 · pauta $10.123.080 · ROAS **9,46×** sobre 59 operativos.
 
-1. **Rotar credenciales.** Tokens de Meta, API key de Google/Gemini y token de GoHighLevel estuvieron públicos unas horas. No gobiernan datos propios: gobiernan el presupuesto publicitario de los clientes.
-2. **Verificar el medio de pago de `1946094894848`.** Cuenta principal de Óptica Ferreira, en `IN_GRACE_PERIOD`, concentra el 58% de toda la inversión administrada.
+De cruzarlos salió `02-Base-Conocimiento/ROAS-no-es-rentabilidad.md`: un ROAS de 15,46× dejó 12,6% de margen neto, porque el ROAS descuenta solo la pauta. **Un informe puede reportar ROAS; no puede llamarlo rentabilidad.** Ferreira corre a 9,46× y no se conoce ni su margen ni el costo de sus operativos.
+
+**Torre de Control publicada:** https://claude.ai/code/artifact/9acd9a55-701a-4352-a1e4-12da7343d753 — para actualizarla, republicar el mismo archivo o pasar esa URL como `url`.
+
+---
+
+## Correcciones a lo que reporté antes
+
+- El error del IVA **nunca estuvo en el contrato**; la v1 ya decía "netos, boleta exenta". Está solo en la propuesta.
+- El fee de Ferreira es **$1.180.000**, no $710.000: había leído solo las primeras filas de la planilla. Está en línea con los $1.190.000 del programa.
+- **Kristus no está bloqueado por Meta** — es despliegue gradual del MCP, puede habilitarse solo.
+
+## Pendiente sin bloqueo
+
+- La cuenta web de Ferreira `1228089025451973` corre vacía: sin gasto en 30 días.
+- Decohogar y Fernando Saavedra mantienen accesos activos sin ser clientes.
+- Faltan los documentos 06 y 07 de la serie DCE; no existen en el disco.
+- Ferreira sigue sin 360 del Negocio ni Manual de Marketing y Ventas. **No los escribí**: requieren margen, equipo, locales y proceso de venta que no tengo. Escribirlos con lo disponible sería fabricar un documento para el cliente más grande.
+- El correo de las 9:04 está agendado como tarea de sesión. **Muere si se cierra la terminal.** Respaldo: borrador en Gmail.
