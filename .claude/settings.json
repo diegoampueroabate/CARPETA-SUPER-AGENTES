@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "mcp__claude_ai_FACEBOOK__ads_get_ad_entities",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(jq -r .permissions.defaultMode '/c/Users/diego/OneDrive/Escritorio/CARPETA SUPER AGENTES/.claude/settings.json')",
+      "Bash(echo 'defaultMode: __CMDSUB_OUTPUT__')",
+      "Bash(jq -r '.permissions.additionalDirectories | length' '/c/Users/diego/OneDrive/Escritorio/CARPETA SUPER AGENTES/.claude/settings.json')",
+      "Bash(echo 'directorios: __CMDSUB_OUTPUT__')",
+      "Bash(jq -r '.permissions.allow | length' '/c/Users/diego/OneDrive/Escritorio/CARPETA SUPER AGENTES/.claude/settings.json')",
+      "Edit(/.claude/skills/direccion-marketing/**)",
+      "PowerShell($f='c:\\\\Users\\\\diego\\\\OneDrive\\\\Escritorio\\\\CARPETA SUPER AGENTES\\\\CLAUDE.md'; \\(Get-Content -LiteralPath $f | Measure-Object -Line\\).Lines)",
+      "Edit(/.claude/skills/direccion-ventas/**)",
+      "Edit(/.claude/skills/direccion-operaciones/**)",
+      "Edit(/.claude/skills/direccion-rrhh/**)",
+      "Edit(/.claude/skills/direccion-finanzas/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\00-AGC-Partners",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-02-Optica-Ferreira",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-08-Pelucas-Antonella",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-09-MASAIFIT-Calama",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-07-Grupal-Corp",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-01-MQFJOYAS",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-03-Sweet-Mayorista",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-04-Importadora-Carlitos",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-05-Kristus",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-06-Distribuidora-Odawe"
+    ]
+  }
+}

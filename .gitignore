@@ -1,0 +1,25 @@
+# Artefactos de sesion de Playwright: capturas, snapshots, logs de consola
+.playwright-mcp/
+whatsapp-qr.png
+*.png
+
+# Secretos: nunca en este repo
+.env
+.env.*
+!.env*.example
+*.pem
+*.key
+KEYS.md
+AccessMD/
+**/CREDENCIALES*.pdf
+**/CREDENCIALES*.docx
+**/PIXEL*TOKEN*
+
+# Permisos locales de la maquina, no del proyecto
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
