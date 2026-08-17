@@ -28,7 +28,9 @@ Meta se consulta por el conector `mcp__claude_ai_FACEBOOK__*`, nunca por token e
 
 `ads_get_ad_accounts` da el universo real de cuentas. `ads_get_ad_entities` da métricas — requiere `date_preset` o `time_range`; nunca asumas rango.
 
-**Kristus (`1742661176389545`) tiene el conector deshabilitado por Meta.** Se opera por interfaz y los datos se cargan a mano.
+**Kristus (`1742661176389545`) no responde al conector**, pero no está bloqueada: el motivo que devuelve la API es *"Ads MCP is gradually being rolled out"* — despliegue gradual, no una restricción de la cuenta. Puede habilitarse sola; conviene reintentar antes de asumir que no se puede.
+
+Mientras tanto sus datos vienen de `Cliente-05-Kristus/05-Finanzas/2026-08-gira-norte-y-proyeccion-sur.md`, que es su única fuente.
 
 ## Sesgo documentado que debes evitar
 
@@ -45,8 +47,8 @@ Si no tienes el dato de venta, **declara que falta y suspende la recomendación 
 Para marketing propio (contenido de Diego, campañas del programa, cualquier pieza con la marca AGC), la fuente de verdad es `00-AGC-Partners/05-Comercial-Adquisicion/DCE-Programa/`:
 
 - **`01-Marca-v2.md`** — el Documento Maestro de Marca v2.0. Tiene precedencia sobre todo lo demás. Tono, jerarquía del deseo, vocabulario y nombres prohibidos, traducciones obligatorias, frases activo de marca.
-- `02-Avatar.md` — cómo habla el avatar y qué objeciones tiene. El copy usa sus palabras, no las tuyas. **Ojo: declara piso de $10M, desactualizado — el vigente es $20M.**
-- `04-Playbook-Marketing.md` — posicionamiento, enemigo común, ángulos de anuncio, funnel. Mismo desfase de piso.
+- `02-Avatar.md` — cómo habla el avatar y qué objeciones tiene. El copy usa sus palabras, no las tuyas. Piso ya actualizado a $20M.
+- `04-Playbook-Marketing.md` — posicionamiento, enemigo común, ángulos de anuncio, funnel. Piso ya actualizado.
 
 Reglas del v2.0 que rompen copy con más frecuencia: se abre **siempre con plata**, nunca con tiempo ni credenciales; **nunca** "empresario" ni "emprendedor" al abrir; el precio jamás aparece en pieza pública; nada de cifras de resultado prometidas; "agente de IA" se dice **empleado digital**, "implementar" se dice **instalar**, "gestionar" se dice **dirigir**.
 
