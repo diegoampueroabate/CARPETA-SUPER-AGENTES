@@ -51,6 +51,24 @@ Nivel *Dirección aprueba*: la propuesta se arma sin tocar nada. Fatiga medible 
 
 ---
 
+## El hallazgo central de la noche
+
+**El dato de venta no existe.** Tres clientes lo tienen marcado como punto crítico en su propio 360: Sweet ("el 90%+ de las ventas no existe en el sistema"), Odawe ("las 300+ ventas por live NO se ingresan al sistema"), y Ferreira, cuyo cruce de marzo se armó a mano en una planilla — por eso hay un mes y no seis.
+
+Es la característica del segmento: mayoristas que venden por live, cierran por WhatsApp y cobran por transferencia. El ciclo ocurre fuera de todo sistema que registre. Consecuencia: **el CRM no es un componente del paquete, es el primer entregable** — sin él no se puede demostrar que el trabajo funciona. Y es el argumento de venta más fuerte que AGC tiene sin usar. Ver `02-Base-Conocimiento/El-dato-de-venta-no-existe.md`.
+
+AGC tiene el mismo problema: cero documentos en WASABIL, $180.000/mes sin boleta.
+
+## Corrección del piso — mi afirmación era falsa
+
+Escribí que "la mayoría de los clientes no cumple el piso de $20M". Lo afirmé sin dato. Los 360 dicen: Ferreira $95,7M medido · Sweet $24-40M · MQFJOYAS $30-35M · Kristus $30-35M · Carlitos $120-130M · Odawe $20-70M por live. **Los cuatro que pagan lo superan, y los dos cerrados también.** El piso no amenaza la cartera: describe el perfil que AGC ya atiende.
+
+## Plantillas del método, extraídas de lo entregado
+
+Sweet y Odawe tienen el **mismo** Manual de Ventas y Marketing con los nombres cambiados: misma estructura, mismo recorrido de seis pasos, y en ambos el paso 4 —esperar respuesta— es donde se cae la venta. `04-Plantillas/Manual-Ventas-y-Marketing.md` y `04-Plantillas/360-del-Negocio.md` salen de ahí, no de una invención.
+
+Nota técnica: los PDF se leen con **PyMuPDF** (`import pymupdf`), que está disponible. Extrae texto sin gastar contexto en imágenes — así se abrieron los ~90 PDF de cliente de Descargas.
+
 ## Lo que se construyó
 
 **Fase 1 · fuente de verdad.** Registro Maestro reescrito contra la API: 20 cuentas cruzadas, cartera en 4 que pagan + 2 sin cobro. Se eliminaron dos `account_id` inexistentes que hacían fallar consultas en silencio. Las 9 fichas con frontmatter y alias de Obsidian para que los wikilinks resuelvan.
