@@ -67,6 +67,12 @@ De ahí salió `01-SOPs-Maestros/Catalogo-de-Entregables.md`: **AGC ya tenía un
 
 Correcciones que salieron de la API: Kristus no está bloqueado, es despliegue gradual del MCP ("Ads MCP is gradually being rolled out"). La cuenta web de Ferreira `1228089025451973` corre vacía, sin gasto en 30 días. Decohogar y Fernando Saavedra siguen con accesos activos sin ser clientes.
 
+**Fase 5 — levantamiento técnico: el hallazgo fue que nada estaba versionado.** `AGENTE DE PROCESO` tenía 24 cambios sin commitear (toda la noche) y `CARPETA SUPER AGENTES` **no tenía git en absoluto** — el orquestador, los 7 skills y la memoria completa, sin control de versiones. Ambos commiteados **en local, sin push**: los repos son privados pero subir después de la filtración de tokens es decisión de Diego.
+
+**El escaneo previo al commit encontró un token real que yo mismo había importado.** `PIXEL-Y-TOKEN-SWEET.md` traía el token del pixel de Sweet en texto plano, convertido desde un `.docx` de Descargas. Retirado antes de commitear y reemplazado por un aviso — un token en un repo de git queda en el historial para siempre. **Sumarlo a la lista de rotación.**
+
+Y mi propio `.gitignore` tapó `credenciales-expuestas.md`, que es una nota de memoria, no un secreto: en Windows git compara sin distinguir mayúsculas y `**/CREDENCIALES*` la capturaba. Acotado a `.pdf` y `.docx`.
+
 ## Pendiente
 
 - Fase 5: levantamiento técnico.

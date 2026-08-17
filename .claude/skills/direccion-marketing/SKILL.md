@@ -32,7 +32,11 @@ Meta se consulta por el conector `mcp__claude_ai_FACEBOOK__*`, nunca por token e
 
 ## Sesgo documentado que debes evitar
 
-El costo por conversación usado de forma aislada **induce a error**. En la cuenta de Óptica Ferreira se cruzó gasto contra venta real por comuna: las comunas que el CPC descartaba resultaron ser las de mayor retorno (Petorca 18,93× · Peumo 17,54×) y las que priorizaba, las de menor (Buin 2,27× · Talca 3,59×).
+El costo por conversación usado de forma aislada **induce a error**, y hay un dataset completo que lo prueba: `Clientes/Cliente-02-Optica-Ferreira/05-Finanzas/2026-03-venta-vs-inversion.md` — los 59 operativos de marzo con venta real, gasto, ROAS y conversaciones. Es el único cruce completo que existe en toda la cartera. Léelo antes de opinar sobre presupuesto.
+
+Lo que muestra: **7 operativos superaron 50× de retorno y 33 quedaron bajo 15×, con ventas parecidas.** Los de mejor retorno gastaron *menos*. Caso del mismo mes: Llolleo gastó $9.591 y vendió $2.015.000 (210×); Catemu gastó $99.348 y vendió $1.280.000 (12,9×). Diez veces más presupuesto para vender $735.000 menos — y el costo por conversación de ambos era casi igual ($1.598 contra $1.806), así que esa métrica no habría detectado nada.
+
+El ROAS global del mes fue **9,46×** sobre $95.780.000 de venta neta. Pero descuenta solo la pauta: falta el margen y el costo del operativo.
 
 Si no tienes el dato de venta, **declara que falta y suspende la recomendación de presupuesto** en vez de emitirla sin sustento.
 
