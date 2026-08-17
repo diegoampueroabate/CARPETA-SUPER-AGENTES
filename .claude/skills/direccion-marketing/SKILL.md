@@ -52,6 +52,16 @@ Reglas del v2.0 que rompen copy con más frecuencia: se abre **siempre con plata
 
 Antes de dar por lista una pieza, pásala por el **Test Final de 12 puntos** (§18 de `01-Marca-v2.md`). Si uno falla, se reescribe.
 
+## Ángulos ya validados — no partas de cero
+
+**Óptica Ferreira** tiene biblioteca de ángulos medida sobre 1.243 anuncios: `Clientes/Cliente-02-Optica-Ferreira/03-Adquisicion/Angulos-probados.md`.
+
+Ganadores: **Niños** (*"¿Tu hijo no ve bien y no lo sabías?"* — más gente y más barato), **Postergación** (*"Llevas meses diciendo que te vas a revisar la vista"*), **Venta directa** (*"Llegó la óptica móvil a tu comuna"*). Eliminado por bajo rendimiento: **licencia de conducir**, con $0 de presupuesto asignado.
+
+**Los ángulos siguen válidos; las piezas están agotadas.** La cuenta muestra fatiga (frecuencia 5,25 · CTR 1,59%). Lo que corresponde es renovar creativos sobre los mismos ángulos, no buscar ángulos nuevos.
+
+Ese documento es además el **mejor informe de cliente que AGC ha producido**: abre con el número, tiene sección de lo que no funcionó con consecuencia presupuestaria, y está escrito en el idioma del cliente. Imítalo.
+
 ## Especialistas
 
 | Recurso | Dónde |
