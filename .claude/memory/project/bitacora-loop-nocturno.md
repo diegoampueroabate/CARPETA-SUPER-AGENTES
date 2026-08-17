@@ -19,7 +19,13 @@ A las 02:00 la cuenta `1946094894848` pasó de `IN_GRACE_PERIOD` a **`UNSETTLED`
 
 ### 2 · Rotar credenciales
 
-Tokens de Meta, API key de Google/Gemini y token de GoHighLevel estuvieron públicos unas horas. Se suman dos hallazgos de la noche: **3 PDF `CREDENCIALES OPTICA FERREIRA`** sueltos en `~/Downloads`, y el **token del pixel de Sweet en texto plano** dentro de un `.docx`, que yo mismo importé por error a la bóveda antes de retirarlo. No gobiernan datos propios: gobiernan el presupuesto publicitario de los clientes.
+**Son 26, y están contadas una por una** en [[credenciales-expuestas]]: 19 tokens de Meta, 2 API keys de Google/Gemini y 6 de GoHighLevel, repartidas en `AccessMD/`, tres `settings.json` y `KEYS.md`. Estaban **versionadas y en el historial de GitHub desde el commit inicial**, y los repos fueron públicos unas horas.
+
+Anoche saqué los archivos del control de versiones y los cubrí con `.gitignore` en cada repo, y retiré la key de Gemini que estaba literal en la línea 217 del `CLAUDE.md` de ADS MANAGER. **Eso detiene la exposición futura, no la pasada:** retirar un secreto del árbol no lo borra del historial. Borrarlo de verdad exige reescribir historial y forzar push — decisión de Diego, no la tomo solo.
+
+**La única acción que cierra el riesgo es rotar las 26.** No gobiernan datos propios: gobiernan el presupuesto publicitario de Ferreira, Sweet, MQFJOYAS y Kristus.
+
+Fuera de git: 3 PDF `CREDENCIALES OPTICA FERREIRA` en `~/Downloads`, y el token del pixel de Sweet dentro de un `.docx` que yo mismo importé por error a la bóveda antes de retirarlo.
 
 ### 3 · Facturación · ¿por dónde se factura realmente?
 
