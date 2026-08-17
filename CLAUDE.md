@@ -77,7 +77,9 @@ Los subagentes no se pasan mensajes entre sí: cada uno lee la ficha del cliente
 
 **Reconciliado el 2026-08-16.** Convivían tres listados que no coincidían (7 en el Registro, 11 en ADS MANAGER, 20 cuentas reales en Meta) y dos `account_id` en uso activo no existían: las consultas fallaban en silencio. Por eso ningún `account_id` se usa de memoria ni de un documento antiguo — se verifica contra `ads_get_ad_accounts` primero.
 
-**Riesgo abierto:** el 93% de la inversión administrada es Óptica Ferreira, y su cuenta principal `1946094894848` está en `IN_GRACE_PERIOD`. Se reporta en cada revisión hasta que se cierre.
+**Riesgo abierto:** el 93% de la inversión administrada es Óptica Ferreira, y su cuenta principal `1946094894848` pasó a `UNSETTLED` el 2026-08-17 — saldo impago con Meta, ya no responde consultas. Se reporta en cada revisión hasta que se cierre, **verificando el estado contra la API**: cambió de un día para otro.
+
+**El dato de venta no existe en el segmento.** Tres clientes lo tienen marcado como punto crítico en su propio 360: las ventas por live no se registran en ningún sistema. Ningún informe puede cruzar gasto contra venta hasta que el registro exista, y pedírselo al cliente no sirve porque tampoco lo tiene. Ver `02-Base-Conocimiento/El-dato-de-venta-no-existe.md`.
 
 ## Convención de skills
 

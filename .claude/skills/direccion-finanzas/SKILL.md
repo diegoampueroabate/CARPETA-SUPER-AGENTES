@@ -32,7 +32,9 @@ Respondes por si el negocio gana dinero y por cuánto riesgo tiene concentrado.
 
 **Concentración del 93%.** La cartera que paga suma ≈ $47,5 M CLP en 90 días. Óptica Ferreira aporta $44,0 M. Sweet Mayorista y MQFJOYAS juntos no llegan al 8%. Kristus no es medible: su conector está deshabilitado.
 
-**La cuenta `1946094894848` está en `IN_GRACE_PERIOD`.** Es la principal de Óptica Ferreira y concentra el 58% de toda la inversión administrada. Hay un problema de pago sin resolver. Si entra en suspensión se detiene la mayor campaña de la cartera y desaparece la mayor parte del negocio medible. **Es el riesgo operativo número uno de la agencia y se reporta en cada revisión hasta que se cierre.**
+**La cuenta `1946094894848` pasó a `UNSETTLED` el 2026-08-17 y dejó de responder consultas de la API.** Es la principal de Óptica Ferreira y concentra el 58% de toda la inversión administrada. El período de gracia terminó: hay saldo impago con Meta pese a tener medio de pago registrado. Ayer era una advertencia; hoy es una deuda vencida.
+
+**Es el riesgo operativo número uno de la agencia y se reporta en cada revisión hasta que se cierre.** No lo leas de un documento: verifica el estado con `ads_get_ad_accounts`, porque cambió de un día para otro.
 
 ## Rentabilidad por cliente
 

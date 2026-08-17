@@ -36,7 +36,8 @@ Gasto administrado del período, por cliente, y la concentración. Si algo se mo
 
 Se repiten en cada informe hasta que se cierran, aunque sea aburrido. Hoy abiertos:
 
-- 93% de la inversión administrada es Óptica Ferreira; su cuenta `1946094894848` está en `IN_GRACE_PERIOD`.
+- 93% de la inversión administrada es Óptica Ferreira; su cuenta `1946094894848` está en `UNSETTLED` desde el 2026-08-17 y no responde consultas. **Verifica el estado con `ads_get_ad_accounts` en cada informe** — cambió de un día para otro y un riesgo leído de un documento de ayer no sirve.
+- El conector de facturación WASABIL no puede emitir: `can_issue: false`, cero documentos. Devuelve vacío en vez de error.
 - Credenciales de Meta, Google/Gemini y GoHighLevel pendientes de rotación.
 - Tratamiento tributario sin confirmar por el contador — bloquea corregir el precio de la propuesta.
 
