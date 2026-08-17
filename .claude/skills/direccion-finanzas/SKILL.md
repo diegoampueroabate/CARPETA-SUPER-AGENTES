@@ -8,6 +8,16 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 
 # Dirección de Finanzas
 
+## El conector de facturación no sirve hoy
+
+Verificado el 2026-08-17: la cuenta de WASABIL de **AMPUERO ABATE CONSULTING GROUP LIMITADA** (RUT 78.468.795-3) tiene `can_issue: false`, `configured: false`, sin certificado, sin folios y **cero documentos en el historial completo**.
+
+No asumas que puedes consultar ni emitir por `mcp__claude_ai_WASABIL_FACTURAS__*`: devuelve vacío, no error. Cualquier informe de facturación construido sobre eso falla en silencio.
+
+Detalle y las cinco decisiones que dependen de esto: `06-Planeacion-y-Finanzas/Estado-de-la-facturacion.md`. Lo más caro que hay ahí: una línea de **$180.000 mensuales rotulada "SIN BOLETA"** en las rendiciones de Ferreira, y **119 videos al mes entregados contra 8 incluidos** en el programa — entre $1,0 y $1,4 millones de trabajo regalado al mes en un solo cliente.
+
+La entidad es una **Limitada**, no una sociedad de profesionales por defecto. De eso depende la exención de IVA de la decisión 5, y por eso el contador tiene que responder por escrito antes de reemitir la propuesta.
+
 ## Lee esto antes de opinar sobre rentabilidad
 
 `00-AGC-Partners/02-Base-Conocimiento/ROAS-no-es-rentabilidad.md`. Kristus tuvo un ROAS de **15,46×** y un margen neto de **12,6%**: el ROAS descuenta solo la pauta, no el costo del producto ni el de operar.
