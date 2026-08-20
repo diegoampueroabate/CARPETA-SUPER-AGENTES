@@ -55,6 +55,22 @@ Los clientes cerrados con `valor_documental: alto` (Importadora Carlitos, Distri
 
 De Odawe sale un dato duro y vendible: $37.282 CLP en 90 días no sacan las campañas de la fase de aprendizaje de Meta. Sirve para fijar presupuesto mínimo en la propuesta y para no aceptar un cliente que no puede financiar su propio resultado.
 
+## GoHighLevel: explotarlo, no reemplazarlo
+
+Decisión de Dirección del 17-ago. Lee `01-SOPs-Maestros/SOP-Maximizar-GoHighLevel.md` antes de tocar nada de GHL.
+
+**GHL no es un costo, es el producto.** Es literalmente la "plataforma comercial" que la propuesta promete instalar por $1.190.000 CLP al mes. El plan Unlimited son $297 fijos sin importar cuántos clientes: hoy $74 por cliente, con 10 serían $30.
+
+Dos cosas que hay que saber antes de trabajar ahí:
+
+**El setup está desactualizado.** `AGENTE GHL/subcuentas/` tiene una sola subcuenta configurada — `grupal-corp`, el cliente que se fue. Ninguno de los cuatro que pagan aparece. Muy probablemente cada cuenta se arma a mano, que es el cuello de botella de 5-7 días del diagnóstico.
+
+**La palanca es Snapshots.** Plantillas clonables a nivel de agencia que instalan pipeline, workflows, calendarios y campos de una vez. Construir uno bueno convierte días en minutos. Es la función de mejor retorno de la plataforma y la que se pierde armando a mano.
+
+**Y el campo que desbloquea todo lo demás:** `monto_venta` en la oportunidad al cerrar. Tres clientes no registran sus ventas en ningún sistema — por eso ningún informe puede cruzar gasto contra venta. GHL resuelve eso y ya está pagado.
+
+Los 3 tokens de GHL están entre las credenciales expuestas: rotarlos antes de construir encima.
+
 ## Herramientas
 
 | Recurso | Dónde |

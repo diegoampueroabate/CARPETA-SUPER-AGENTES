@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "bypassPermissions",
     "allow": [
       "mcp__claude_ai_FACEBOOK__ads_get_ad_entities",
       "Skill(update-config)",
@@ -15,8 +14,21 @@
       "Edit(/.claude/skills/direccion-ventas/**)",
       "Edit(/.claude/skills/direccion-operaciones/**)",
       "Edit(/.claude/skills/direccion-rrhh/**)",
-      "Edit(/.claude/skills/direccion-finanzas/**)"
+      "Edit(/.claude/skills/direccion-finanzas/**)",
+      "Skill(loop)",
+      "Skill(loop:*)",
+      "Bash(grep -n \"^#\\\\{1,2\\\\} \" CLAUDE.md)",
+      "Bash(npx --no-install tsc --noEmit)",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"try{require\\('yaml'\\);console.log\\('OK yaml v'+require\\('yaml/package.json'\\).version\\)}catch\\(e\\){console.log\\('sigue sin estar'\\)}\")",
+      "Bash(grep -n \"^#\\\\{1,3\\\\} \" .claude/skills/add-login/SKILL.md)",
+      "Bash(grep -nE \"^\\\\s*\\(//|#\\).*\\\\.\\(ts|tsx\\)|^\\\\*\\\\*.*\\\\.\\(ts|tsx\\)|proxy\\\\.ts|actions/auth\" .claude/skills/add-login/SKILL.md)",
+      "Bash(rm -rf \"src/app/\\(auth\\)/signup\")",
+      "Bash(rm -rf .next/types .next/dev/types)",
+      "mcp__claude_ai_Supabase__list_projects",
+      "Bash(node scripts/worker-agentes.mjs --probar analizar-fatiga-creativa)"
     ],
+    "defaultMode": "bypassPermissions",
     "additionalDirectories": [
       "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\00-AGC-Partners",
       "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-02-Optica-Ferreira",
@@ -27,7 +39,9 @@
       "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-03-Sweet-Mayorista",
       "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-04-Importadora-Carlitos",
       "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-05-Kristus",
-      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-06-Distribuidora-Odawe"
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\Clientes\\Cliente-06-Distribuidora-Odawe",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\00-AGC-Partners\\01-SOPs-Maestros",
+      "c:\\Users\\diego\\OneDrive\\Escritorio\\AGENTE DE PROCESO\\00-AGC-Partners\\06-Planeacion-y-Finanzas"
     ]
   }
 }
